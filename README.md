@@ -159,8 +159,8 @@ http://localhost:3001/graphql
 ```graphql
 mutation {
   createContacts(contacts: [
-    { "name": "Lucas", "cell_phone": "5541998765432" },
-    { "name": "Ana", "cell_phone": "5541987654321" }
+    { name: "Lucas", cell_phone: "5541998765432" },
+    { name: "Ana", cell_phone: "5541987654321" }
   ]) {
     name
     cell_phone
