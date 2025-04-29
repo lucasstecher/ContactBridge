@@ -1,0 +1,19 @@
+directive @currentClient on FIELD_DEFINITION
+
+type Contact {
+  name: String!
+  cell_phone: String!
+}
+
+input CreateContactInput {
+  name: String!
+  cell_phone: String!
+}
+
+type Query {
+  sayHello: String!
+}
+
+type Mutation {
+  createContacts(contacts: [CreateContactInput!]!): [Contact!]! @currentClient
+}
